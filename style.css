@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --font-primary: "Inter", sans-serif;
+    --color-primary: #667085;
+    --color-second: #8E2424;
+    --color-third: #3A404E;
+    --color-fourth: #101828;
+    --white: #ffff;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho__navbar {
+    width: 93vw;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;  
+    padding: 32px;  
+    
+}
+
+.cabecalho__identidade {
+    width: 9.25em;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 8px; 
+}
+
+.cabecalho__identidade {
+    width: 22.63;
+}
+
+.identidade__nome {
+    font-size: 18px;
+    color: #3A404E;
+    margin-left: 10px;
+}
+
+.cabecalho__links {
+    font-size: 16px; 
+}
+
+.cabecalho__links > a{
+    padding: 15px;
+    text-decoration: none;
+    color: var(--color-primary);
+    
+}
+
+.cabecalho__links > a:hover {
+    background-color: #868c9729;
+    border-radius: 10px;
+    transition: .8s;
+}
+
+.botoes__login {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    border: none;
+    background-color: var(--white);
+    padding-bottom: .2em;
+}
+
+.botoes__login--hover {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.botoes__login--hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; 
+  
+}
+
+.botoes__login--hover:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.botoes__register {
+    background-color: var(--color-second);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    transition: 0.5s;
+    margin-left: 2em;
+}
+
+.botoes__register:hover {
+    cursor: pointer;
+    background-color: #a93d3d;
+    transition: 0.5s;
+}
+
+.aboutSection {
+    width: 50em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 6em auto;
+}
+
+.aboutSection__span {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-second);
+}
+
+.aboutSection__titulo {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--color-third);
+    padding: .5em 0 .5em 0;
+}
+
+.aboutSection__texto {
+    font-size: 20px;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.metricsSection__container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 6em;
+}
+
+.metricsSection__item {
+    width: 270px;
+}
+
+.metricsSection__titulo {
+    font-size: 60px;
+    color: var(--color-second);
+    font-weight: bolder;
+    padding-bottom: .3em;
+}
+
+.metricsSection__span {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-third);
+}
+
+.metricsSection__paragrafo {
+    padding-top: .7em;
+    color: var(--color-primary);
+}
+
+.vagaSection {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 10em;
+}
+
+.vaga__container {
+    flex-direction: column;
+}
+
+.vaga__containerSpan {
+    background-color: rgba(142, 36, 36, 0.05);
+    color: var(--color-second);
+    font-size: 14px;
+    border-radius: 16px;
+    padding: 5px 10px;
+    font-weight: 600;
+    width: 150px;
+    margin: auto;
+}
+
+.vaga__containerTitulo {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-fourth);
+    padding: .5em 0 .5em 0;
+}
+
+.vaga__containerTexto {
+    font-size: 20px;
+    color: var(--color-primary);
+    padding-bottom: 2.5em;
+}
+
+.vagasAbertasSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.container__vagasAbertas {
+    width: 40%;
+}
+
+.vagasAberta__vaga {
+    border: 2px solid #EAECF0;
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 1.5em;
+}
+
+.vagasAbertas__titulo {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--color-fourth);
+    padding: 3em 0 .5em 0;
+}
+
+.vaga__titulo {
+    font-size: 18px;
+    color: var(--color-fourth);
+    font-weight: 500;
+}
+
+.vaga__container {
+    display: flex;
+}
+
+.vaga__texto {
+    font-size: 16px;
+    color: var(--color-primary);
+    margin: 2em 1.5em 0 0;
+}
+
+.depoimentosSection {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 8em;
+    padding-bottom: 7em;
+}
+
+.depoimentos__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(195, 25, 25, 0.06);
+    width: 80vw;
+    border-radius: 16px;
+}
+
+.depoimentos__imagem {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.depoimentos__span {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-second);
+    margin-top: 5em;
+}
+
+.depoimentos__titulo {
+    font-size: 36px;
+    color: var(--color-fourth);
+    margin: auto;
+    padding: 1em 0 1em 0;
+    width: 65vw;
+}
+
+.depoimentos__imagem {
+    margin-bottom: 1em;
+}
+
+.depoimentos__nome {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-fourth);
+}
+
+.depoimentos__cargo {
+    font-size: 14px;
+    color: var(--color-primary);
+    margin-bottom: 4em;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F9FAFB;
+}
+
+.footer__titulo {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 3em 0 .5em 0;
+}
+
+.footer__texto {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: 2em;
+}
+
+.footer__container-email {
+    margin-bottom: 2em;
+}
+
+.footer__email {
+    padding: 1em;
+    width: 20vw;
+    border-radius: 10px;
+    border: 1px solid #d3d5d9;
+}
+
+.footer__email::placeholder {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+}
+
+.footer__botao {
+    margin-left: 1em;
+    background-color: var(--color-second);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+
+.footer__botao:hover {
+    cursor: pointer;
+    background-color: #a93d3d;
+    transition: 0.5s;
+}
+
+.footer__direitosAutorais {
+    font-size: 16px;
+    color: #98A2B3;
+    margin-bottom: 6em;
+}
+
+/* Barra de rolagem */
+
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-second); 
+    border-radius: 5px; 
+}
+
+/* Carrossel */
+
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1024px) {
+    .cabecalho__navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .cabecalho__identidade{
+        margin-bottom: 1em;
+    }
+
+    .cabecalho__links > a {
+        padding: .4em;
+    } 
+
+    .cabecalho__botoes {
+        display: none;
+    }
+
+
+    .aboutSection {
+        width: 100vw;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .metricsSection {
+        margin-bottom: -80px;
+    }
+
+    .metricsSection__container {
+        display: flex;
+        flex-direction: column;
+        margin-top: -120px;
+        padding-left: 75px;
+        text-align: center;
+    }
+
+
+    .vaga__container > img {
+        width: 100vw;
+        padding: 0 15px 0 15px;
+    }
+
+    .vagasAbertasSection {
+        margin-top: -30px;
+    }
+
+    .vagasAbertas__titulo {
+        margin-left: -60px;
+    }
+
+    .vagasAberta__vaga {
+        width: 90vw;
+        margin-left: -100px;
+    }
+
+    .vaga__titulo {
+        margin-top: -10px;
+        padding: 0;
+    }
+
+    .vaga__container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .depoimentosSection {
+        margin-top: 60px;
+    }
+
+    .depoimentos__span {
+        width: 70%;
+    }
+
+    .depoimentos__titulo {
+        font-size: 20px;
+    }
+
+    .footer__container {
+        width: 100vw;
+        text-align: center;
+    }
+
+    .footer__titulo, .footer__texto {
+        padding: 0 10px 0 10px;
+    }
+
+    .footer__container-email{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__email {
+        width: 100%;
+    }
+
+    .footer__botao {
+        margin: auto;
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {}
